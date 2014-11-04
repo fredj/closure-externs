@@ -6,7 +6,7 @@
 
 
 /**
- * @typedef {Array.<string,*>}
+ * @typedef {Object.<string,*>}
  */
 var BloodhoundDatum;
 
@@ -18,7 +18,7 @@ var BloodhoundDatum;
  *   rateLimitBy: (string|undefined),
  *   rateLimitWait: (number|undefined),
  *   filter: (function(?):Array.<BloodhoundDatum>|undefined),
- *   ajax: (Object.<string,*>|undefined)
+ *   ajax: (jQueryAjaxSettings|undefined)
  * }}
  */
 var BloodhoundRemoteOptions;
@@ -35,7 +35,6 @@ var BloodhoundRemoteOptions;
  */
 var BloodhoundPrefetchOptions;
 
-
 /**
  * @typedef {{
  *   datumTokenizer: function(BloodhoundDatum):Array.<string>,
@@ -49,7 +48,6 @@ var BloodhoundPrefetchOptions;
  * }}
  */
 var BloodhoundOptions;
-
 
 /**
  * @constructor
@@ -99,7 +97,6 @@ Bloodhound.prototype.get = function(query, callback) {};
  */
 Bloodhound.prototype.ttAdapter = function() {};
 
-
 Bloodhound.tokenizers = {};
 
 /**
@@ -113,7 +110,6 @@ Bloodhound.tokenizers.whitespace = function(datum) {};
  * @return {Array.<string>}
  */
 Bloodhound.tokenizers.nonword = function(datum) {};
-
 
 Bloodhound.tokenizers.obj = {};
 
