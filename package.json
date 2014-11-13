@@ -1,0 +1,17 @@
+{
+  "name": "closure-externs",
+  "version": "0.0.1",
+  "description": "Externs files",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fredj/closure-externs.git"
+  },
+  "keywords": [
+    "externs",
+    "closure-compiler"
+  ],
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/fredj/closure-externs/issues"
+  }
+}
