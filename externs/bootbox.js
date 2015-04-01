@@ -5,16 +5,35 @@
  */
 
 
-// FIXME: bootbox.alert custom options
-// FIXME: bootbox.prompt custom options
-// FIXME: bootbox.confirm custom options
-// FIXME: bootbox.dialog
+// FIXME: bootbox.alert simple version
+// FIXME: bootbox.prompt simple version
+// FIXME: bootbox.confirm simple version
+// FIXME: more BootboxDialogOptions values
 // FIXME: bootbox.init
 // FIXME: bootbox.setDefaults
-// FIXME: bootbox.addLocale
-// FIXME: bootbox.removeLocale
-// FIXME: bootbox.setLocale
 // FIXME: bootbox.hideAll
+
+
+/**
+ * @typedef {{
+ *   message: string,
+ *   title: (string|undefined),
+ *   locale: (string|undefined),
+ *   callback: (function(boolean)|undefined)
+ * }}
+ */
+var BootboxDialogOptions;
+
+
+/**
+ * @typedef {{
+ *   OK: string,
+ *   CANCEL: string,
+ *   CONFIRM: string
+ * }}
+ */
+var BootboxLocalDefinition;
+
 
 /**
  * @type {Object}
@@ -23,19 +42,37 @@
 var bootbox = {};
 
 /**
- * @param {string} message
- * @param {Function=} opt_callback
+ * @param {BootboxDialogOptions} options
  */
-bootbox.alert = function(message, opt_callback) {};
+bootbox.dialog = function(options) {};
 
 /**
- * @param {string} message
- * @param {Function} callback
+ * @param {BootboxDialogOptions} options
  */
-bootbox.prompt = function(message, callback) {};
+bootbox.alert = function(options) {};
 
 /**
- * @param {string} message
- * @param {Function} callback
+ * @param {BootboxDialogOptions} options
  */
-bootbox.confirm = function(message, callback) {};
+bootbox.prompt = function(options) {};
+
+/**
+ * @param {BootboxDialogOptions} options
+ */
+bootbox.confirm = function(options) {};
+
+/**
+ * @param {string} name
+ */
+bootbox.setLocale = function(name) {};
+
+/**
+ * @param {string} name
+ * @param {BootboxLocalDefinition} values
+ */
+bootbox.addLocale = function(name, values) {};
+
+/**
+ * @param {string} name
+ */
+bootbox.removeLocale = function(name) {};
