@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for Typeahead 0.10.5
+ * @fileoverview Externs for Typeahead 0.11.1
  * @see https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md
  * @externs
  */
@@ -35,8 +35,8 @@ var TypeaheadDataset;
 var TypeaheadOptions;
 
 /**
- * @param {string|TypeaheadOptions} options
- * @param {...TypeaheadDataset} var_dataset
+ * @param {TypeaheadOptions|string} options
+ * @param {...TypeaheadDataset|string} var_dataset
  * @return {!jQuery}
  */
 jQuery.prototype.typeahead = function(options, var_dataset) {};
