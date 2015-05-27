@@ -7,7 +7,8 @@
 
 /**
  * @typedef {{
- *   empty: (function(Object):string|undefined),
+ *   notFound: (function(Object):string|undefined),
+ *   pending: (function(Object):string|undefined),
  *   footer: (function(Object):string|undefined),
  *   header: (function(Object):string|undefined),
  *   suggestion: (function(Object):string|undefined)
@@ -18,18 +19,22 @@ var TypeaheadTemplates;
 /**
  * @typedef {{
  *   source: function(string,function(Array.<BloodhoundDatum>)),
+ *   async: (boolean|undefined),
  *   name: (string|undefined),
- *   displayKey: (string|undefined),
+ *   limit: (number|undefined),
+ *   display: (string|function(Object):string|undefined),
  *   templates: (TypeaheadTemplates|undefined)
  * }}
  */
 var TypeaheadDataset;
 
+// FIXME: better classNames
 /**
  * @typedef {{
  *   highlight: (boolean|undefined),
  *   hint: (boolean|undefined),
- *   minLength: (number|undefined)
+ *   minLength: (number|undefined),
+ *   classNames: (Object|undefined)
  * }}
  */
 var TypeaheadOptions;

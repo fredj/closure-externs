@@ -1,5 +1,5 @@
 /**
- * @fileoverview Externs for Bloodhound 0.10.5
+ * @fileoverview Externs for Bloodhound 0.11.1
  * @see https://github.com/twitter/typeahead.js/blob/master/doc/bloodhound.md
  * @externs
  */
@@ -10,27 +10,29 @@
  */
 var BloodhoundDatum;
 
+
+// FIXME: add prepare
+// FIXME: add transform
 /**
  * @typedef {{
  *   url: string,
  *   wildcard: (string|undefined),
- *   replace: (function(string,string):string|undefined),
  *   rateLimitBy: (string|undefined),
- *   rateLimitWait: (number|undefined),
- *   filter: (function(?):Array.<BloodhoundDatum>|undefined),
- *   ajax: (jQueryAjaxSettings|undefined)
+ *   rateLimitWait: (number|undefined)
  * }}
  */
 var BloodhoundRemoteOptions;
 
+
+// FIXME: add prepare
+// FIXME: add transform
 /**
  * @typedef {{
  *   url: string,
- *   cacheKey: (string|undefined),
+ *   cache: (boolean|undefined),
  *   ttl: (number|undefined),
- *   thumbprint: (string|undefined),
- *   filter: (function(?):Array.<BloodhoundDatum>|undefined),
- *   ajax: (Object.<string,*>|undefined)
+ *   cacheKey: (string|undefined),
+ *   thumbprint: (string|undefined)
  * }}
  */
 var BloodhoundPrefetchOptions;
@@ -39,8 +41,9 @@ var BloodhoundPrefetchOptions;
  * @typedef {{
  *   datumTokenizer: function(BloodhoundDatum):Array.<string>,
  *   queryTokenizer: function(string):Array.<string>,
- *   limit: (number|undefined),
- *   dupDetector: (function():boolean|undefined),
+ *   initialize: (string|undefined),
+ *   identify: (function(BloodhoundDatum):string|undefined),
+ *   sufficient: (number|undefined),
  *   sorter: (function(BloodhoundDatum,BloodhoundDatum):number|undefined),
  *   local: (Array.<BloodhoundDatum>|function():Array.<BloodhoundDatum>|undefined),
  *   prefetch: (string|BloodhoundPrefetchOptions|undefined),
